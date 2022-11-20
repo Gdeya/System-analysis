@@ -20,7 +20,7 @@ def ranking_length(ranking) -> int:
         else:
             length+=len(i)
     return length
-def task5(ranking_str_A: str, ranking_str_B:str) -> str:
+def task(ranking_str_A: str, ranking_str_B:str) -> str:
     ranking_A = json.loads(ranking_str_A)
     ranking_B = json.loads(ranking_str_B)
     y_a = relationship_matrix(ranking_A)
