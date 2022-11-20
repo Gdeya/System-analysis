@@ -34,7 +34,7 @@ def task(ranking_str_A: str, ranking_str_B:str) -> str:
     for i in range(y_a_b.shape[0]):
         for j in range(y_a_b[i].shape[1]):
             if int(y_a_b[i,j]) == 0 and int(y_a_b_t[i,j]) == 0:
-                if (str(j+1),str(i+1)) not in conflicts:
-                    conflicts.append((str(i+1),str(j+1)))
+                if [str(j+1),str(i+1)] not in conflicts:
+                    conflicts.append([str(i+1),str(j+1)])
 
-    return json.dumps(conflicts)
+    return conflicts
