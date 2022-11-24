@@ -1,9 +1,9 @@
 import math
 
 def serialise_csv(path: str):
-    return open(path, mode = 'rb').read()
+    return open(path, mode = 'r').read()
 def process_csv(serialised_csv: str):
-    data = serialised_csv.decode('utf-8').splitlines()
+    data = serialised_csv.splitlines()
     return [line.split(",") for line in data]
 def task(serialised_csv: str):
     matrix = process_csv(serialised_csv)
